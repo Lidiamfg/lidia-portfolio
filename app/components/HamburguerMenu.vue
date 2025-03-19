@@ -7,7 +7,7 @@
     <transition name="fade">
       <div
         v-if="isOpen"
-        class="absolute right-0 mt-2 w-48 bg-slate-800 text-slate-100 p-4 flex flex-col gap-2 rounded-lg shadow-lg shadow-gray-950"
+        class="absolute right-0 mt-10 w-48 bg-slate-800 text-slate-100 p-4 flex flex-col gap-2 rounded-lg shadow-lg shadow-gray-950"
       >
         <a
           v-for="option in menuOptions"
