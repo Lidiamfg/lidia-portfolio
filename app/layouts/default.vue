@@ -1,11 +1,10 @@
 <template>
-  <div class="container mx-auto max-w-1/1">
-    <header >
-
+  <div class="container mx-auto max-w-1/1 p-6">
+    <header>
       <Navbar />
     </header>
 
-    <main class="p-4">
+    <main class="mt-8">
       <slot />
     </main>
   </div>
@@ -22,7 +21,7 @@ useHead({
     {
       rel: "preconnect",
       href: "https://fonts.gstatic.com",
-      crossorigin: true,
+      crossorigin: "",
     },
     {
       rel: "stylesheet",
