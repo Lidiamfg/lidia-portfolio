@@ -4,7 +4,7 @@
       <Navbar />
     </header>
 
-    <main class="mt-8">
+    <main class="mt-23 px-6 flex flex-col gap-8 items-center">
       <slot />
     </main>
   </div>

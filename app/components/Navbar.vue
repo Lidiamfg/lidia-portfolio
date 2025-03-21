@@ -2,7 +2,7 @@
   <nav class="flex items-center justify-between relative">
     <ul class="hidden md:flex gap-6 text-xl">
       <li v-for="option in leftMenu" :key="option.name">
-        <a :href="option.href" class="hover:text-orange-400">
+        <a :href="option.href" class="hover:text-amber-500">
           {{ option.name }}
         </a>
       </li>
@@ -18,7 +18,7 @@
 
     <ul class="hidden md:flex gap-6 text-xl">
       <li v-for="option in rightMenu" :key="option.name">
-        <a :href="option.href" class="hover:text-orange-400">
+        <a :href="option.href" class="hover:text-amber-500">
           {{ option.name }}
         </a>
       </li>
