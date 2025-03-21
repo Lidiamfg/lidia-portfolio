@@ -24,39 +24,16 @@
       </li>
     </ul>
 
-    <HamburguerMenu
-      ref="menuRef"
-      :is-open="isOpen"
-      :handle-menu-click="handleMenuClick"
-      :handle-option-click="handleOptionClick"
-    />
+    <HamburguerMenu :menu-options="menuOptions" />
   </nav>
 </template>
 
 <script setup lang="ts">
 import { menuOptions } from "../data/MenuOptions";
-import { onClickOutside } from "@vueuse/core";
-
-const isOpen = ref<boolean>(false);
-const menuRef = ref<HTMLElement | null>(null);
 
 const middleIndex = computed(() => Math.ceil(menuOptions.length / 2));
 const leftMenu = computed(() => menuOptions.slice(0, middleIndex.value));
 const rightMenu = computed(() => menuOptions.slice(middleIndex.value));
-
-const handleMenuClick = () => {
-  isOpen.value = !isOpen.value;
-};
-
-const handleOptionClick = () => {
-  isOpen.value = false;
-};
-
-onClickOutside(menuRef, () => {
-  isOpen.value = false;
-});
 </script>
 
-<style scoped>
-
-</style>
+<style scoped></style>

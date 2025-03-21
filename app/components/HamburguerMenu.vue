@@ -1,5 +1,5 @@
 <template>
-  <div class="relative flex md:hidden">
+  <div ref="menuRef" class="relative flex md:hidden">
     <button @click="handleMenuClick">
       <IconMenuRounded class="size-10" />
     </button>
@@ -12,7 +12,7 @@
         <a
           v-for="option in menuOptions"
           :href="option.href"
-          class="p-2 rounded-lg transition-colors active:bg-slate-900"
+          class="p-2 rounded-lg transition-colors active:bg-slate-900 hover:bg-slate-900"
           @click="handleOptionClick"
         >
           {{ option.name }}
@@ -23,21 +23,29 @@
 </template>
 
 <script setup lang="ts">
-import { menuOptions } from "../data/MenuOptions";
+import type { MenuOption } from "~/types/Data";
+import { onClickOutside } from "@vueuse/core";
 
 defineProps({
-  isOpen: {
-    type: Boolean,
+  menuOptions: {
+    type: Array as PropType<MenuOption[]>,
     required: true,
   },
-  handleMenuClick: {
-    type: Function as PropType<() => void>,
-    required: true,
-  },
-  handleOptionClick: {
-    type: Function as PropType<() => void>,
-    required: true,
-  },
+});
+
+const isOpen = ref<boolean>(false);
+const menuRef = ref<HTMLElement | null>(null);
+
+const handleMenuClick = () => {
+  isOpen.value = !isOpen.value;
+};
+
+const handleOptionClick = () => {
+  isOpen.value = false;
+};
+
+onClickOutside(menuRef, () => {
+  isOpen.value = false;
 });
 </script>
 
