@@ -26,7 +26,7 @@
           class="lg:hidden absolute font-bold flex flex-col w-full text-5xl bottom-0 translate-y-[60%] sm:text-8xl sm:translate-y-[40%] md:text-9xl md:translate-y-[30%]"
         >
           <span class="mb-1 ml-4 lg:mb-2 lg:ml-6">{{ firstWordTitle }}</span>
-          <span class="self-end min-[1670px]:mr-20 min-[1536px]:mr-5">{{ secondWordTitle }}</span>
+          <span class="self-end">{{ secondWordTitle }}</span>
         </h1>
       </div>
 
@@ -40,7 +40,7 @@
         <div class="xl:w-[80%] 2xl:w-[70%] lg:align-bottom flex flex-col">
           <p class="mb-2 text-lg">{{ heroInfo.intro }}</p>
           <div v-for="paragraph in heroDescriptionParagraphs" :key="paragraph">
-            <p class="text-sm lg:text-sm text-justify my-2">{{ paragraph }}</p>
+            <p class="text-sm lg:text-base text-justify my-2">{{ paragraph }}</p>
           </div>
         </div>
       </div>
