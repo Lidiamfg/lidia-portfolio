@@ -1,5 +1,5 @@
 <template>
-  <div ref="menuRef" class="relative flex md:hidden">
+  <div ref="menuRef" class="relative flex md:hidden z-20">
     <button @click="handleMenuClick">
       <IconMenuRounded class="size-10" />
     </button>

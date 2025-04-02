@@ -1,10 +1,10 @@
 <template>
-  <div class="container mx-auto max-w-1/1 p-6">
-    <header>
+  <div class="container relative mx-auto max-w-1/1 p-6 md:p-12">
+    <header class="fixed top-0 right-0 left-0 p-6 md:px-12 z-10 bg-slate-900">
       <Navbar />
     </header>
 
-    <main class="mt-8">
+    <main class="mt-18 md:mt-23 flex flex-col gap-8 items-center">
       <slot />
     </main>
   </div>
