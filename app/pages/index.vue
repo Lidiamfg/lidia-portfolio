@@ -1,7 +1,7 @@
 <template>
   <HeroSection :hero-info="heroInfo" />
 
-  <TechnologiesSection :technologies="technologies" class="py-8" />
+  <TechnologiesSection :technologies="technologies" class="md:py-4" id="technologies" />
 </template>
 
 <script setup lang="ts">
