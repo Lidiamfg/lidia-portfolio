@@ -10,3 +10,8 @@ export interface HeroInfo {
   image: string;
   buttonText: string;
 }
+
+export interface TechnologiesComp {
+  name: string;
+  component: string;
+}
